@@ -1,15 +1,17 @@
 {
-  "name": "beacon",
-  "version": "0.0.0",
-  "description": "For breezehome",
+  "name": "blepre",
+  "version": "0.1.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
+  "private": false,
   "author": "hapana",
   "license": "ISC",
   "dependencies": {
-    "bleacon": "0.5.1"
+    "noble": "1.7.0",
+    "node-ifttt-maker": "0.1.2",
+    "js-yaml": "3.8.2"
   }
 }

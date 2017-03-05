@@ -1,0 +1,12 @@
+---
+room: room-to-reference-for-current-pi
+debug: false
+maker:
+    key: maker-key
+rooms:
+    example:
+       on-event: example-on 
+       off-event: eample-off
+       signal: -70 
+whitelist:
+    - ma:ct:oa:ll:ow:pi
