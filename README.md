@@ -11,17 +11,18 @@ Modify config and move to config.yml with maker key, room config and the mac add
 
 Run these commands on the Raspberry PI to set it up:
 
-```wpa_passphrase "wifi-essid" "wpapassword" > /etc/wpa_supplicant/wpa_supplicant.conf<br />
-sudo wpa_cli reconfigure<br />
-update-rc.d ssh enable<br />
-wget https://nodejs.org/dist/v4.0.0/node-v4.0.0-linux-armv6l.tar.gz<br />
-tar -xvf node-v4.0.0-linux-armv6l.tar.gz<br />
-cd node-v4.0.0-linux-armv6l<br />
-sudo cp -R * /usr/local/<br />
-sudo ln -s /usr/local/bin/node /usr/local/bin/nodejs<br />
-sudo apt-get install -y vim git tmux<br />
-sudo apt-get install -y bluetooth bluez libbluetooth-dev libudev-dev<br />
-npm install<br />```
+```wpa_passphrase "wifi-essid" "wpapassword" >> /etc/wpa_supplicant/wpa_supplicant.conf
+sudo wpa_cli reconfigure
+update-rc.d ssh enable
+wget https://nodejs.org/dist/v4.0.0/node-v4.0.0-linux-armv6l.tar.gz
+tar -xvf node-v4.0.0-linux-armv6l.tar.gz
+cd node-v4.0.0-linux-armv6l
+sudo cp -R * /usr/local/
+sudo ln -s /usr/local/bin/node /usr/local/bin/nodejs
+sudo apt-get install -y vim git tmux
+sudo apt-get install -y bluetooth bluez libbluetooth-dev libudev-dev
+npm install
+```
 
 Then run the app with `sudo node index.js`
 
