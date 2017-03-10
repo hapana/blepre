@@ -1,0 +1,4 @@
+package: .
+import:
+- package: github.com/shimomo/ibeacon-scanner
+  version: ^0.2.0

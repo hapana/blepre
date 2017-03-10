@@ -1,0 +1,17 @@
+hash: 143c28186f45c57f860f8ce9a784772fc181f8b584d0348a4376c6fe0d6e64cd
+updated: 2017-03-10T15:27:32.33642379Z
+imports:
+- name: github.com/paypal/gatt
+  version: 4ae819d591cfc94c496c45deb55928469542beec
+  subpackages:
+  - examples/option
+  - linux
+  - linux/cmd
+  - linux/evt
+  - linux/gioctl
+  - linux/socket
+  - linux/util
+  - xpc
+- name: github.com/shimomo/ibeacon-scanner
+  version: 4797b505ca850dac6b048393de5272191f84b43b
+testImports: []
