@@ -23,6 +23,7 @@ Run these commands on the Raspberry PI to set it up:
 * sudo apt-get install -y bluetooth bluez libbluetooth-dev libudev-dev
 * npm install
 
+* glide install
 * go build src/github.com/hapana/blepre/blepre.go
 * GODEBUG=cgocheck=0 ./blepre
 Then run the app with `sudo node index.js`
