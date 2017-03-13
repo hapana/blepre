@@ -68,15 +68,27 @@ func main() {
     maker := new(GoIFTTTMaker.MakerChannel)
 
     ibeacon.Scan(func(uuid string, major string, minor string, rssi int) {
+        var devices = make(map[string]bool)
         for i := 0; i < len(whitelist); i += 1 {
             v := whitelist[i]
+            devices[v.(string)] = false
             if v == uuid {
                 if lowsignal < rssi && rssi < highsignal {
-                    maker.Send(makerkey, onevent)
-                    fmt.Println(uuid)
-                    fmt.Println(major)
-                    fmt.Println(minor)
-                    fmt.Println(rssi)
+                    if devices[v.(string)] == false {
+                        maker.Send(makerkey, onevent)
+                        devices[v.(string)] = true
+                        fmt.Println(uuid)
+                        //fmt.Println(major)
+                        //fmt.Println(minor)
+                        fmt.Println(rssi)
+                    }
+                }else{
+                    devices[v.(string)] = false
+                    for _, v := range devices {
+                        if v != true {
+                            maker.Send(makerkey, offevent)
+                        }
+                    }
                 }
             }else{
                 fmt.Println("UUID not allowed: %#u\n", uuid)
