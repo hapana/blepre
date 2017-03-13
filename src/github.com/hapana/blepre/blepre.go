@@ -6,7 +6,7 @@ import (
     "path/filepath"
 
     "github.com/smallfish/simpleyaml"
-    //"github.com/jamesmillerio/go-ifttt-maker"
+    "github.com/jamesmillerio/go-ifttt-maker"
     "github.com/shimomo/ibeacon-scanner"
 )
 
@@ -65,13 +65,14 @@ func main() {
     }
     fmt.Printf("Value: %#v\n", whitelist)
 
-    //maker := new(GoIFTTTMaker.MakerChannel)
+    maker := new(GoIFTTTMaker.MakerChannel)
 
     ibeacon.Scan(func(uuid string, major string, minor string, rssi int) {
         for i := 0; i < len(whitelist); i += 1 {
             v := whitelist[i]
             if v == uuid {
                 if lowsignal < rssi && rssi < highsignal {
+                    maker.Send(makerkey, onevent)
                     fmt.Println(uuid)
                     fmt.Println(major)
                     fmt.Println(minor)
