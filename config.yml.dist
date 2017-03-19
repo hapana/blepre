@@ -7,6 +7,7 @@ rooms:
     example:
        on-event: example-on 
        off-event: eample-off
-       signal: -70 
+       high-signal: -50
+       low-signal: -70 
 whitelist:
-    - ma:ct:oa:ll:ow:pi
+    - bleaconidwithouthyphens

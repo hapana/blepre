@@ -1,0 +1,9 @@
+version: '2'
+services:
+  blepre:
+    build: .
+    entrypoint:
+      - /bin/bash
+      - /go/src/blepre/run.sh
+    volumes:
+     - .:/go/src/blepre
