@@ -21,7 +21,7 @@ var IFTTT = require('node-ifttt-maker'),
     ifttt = new IFTTT(config.maker.key);
 
 var RSSI_THRESHOLD    = -90;
-var EXIT_GRACE_PERIOD = 2000; // milliseconds
+var EXIT_GRACE_PERIOD = config['timeout']; // milliseconds
 
 // Setup Array
 var inRange = [];

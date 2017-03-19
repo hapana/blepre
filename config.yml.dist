@@ -1,6 +1,7 @@
 ---
 room: room-to-reference-for-current-pi
 debug: false
+timeout: 4000
 maker:
     key: maker-key
 rooms:
